@@ -2,53 +2,24 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+## Special Thanks to
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+`https://alexop.dev/posts/create-pwa-vue3-vite-4-steps/`
 
-## Recommended Browser Setup
+### Notes
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+We’ll use the vite-plugin-pwa to integrate Workbox, which will handle our service worker and caching strategies.
 
-## Type Support for `.vue` Imports in TS
+Before we dive into the configuration, let’s understand the runtime caching strategies we’ll be using:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+StaleWhileRevalidate for static resources (styles, scripts, and workers):
 
-## Customize configuration
+This strategy serves cached content immediately while fetching an update in the background.
+It’s ideal for frequently updated resources that aren’t 100% up-to-date.
+We’ll limit the cache to 50 entries and set an expiration of 30 days.
+CacheFirst for images:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-pnpm test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+This strategy serves cached images immediately without network requests if they’re available.
+It’s perfect for static assets that don’t change often.
+We’ll limit the image cache to 100 entries and set an expiration of 60 days.
+These strategies ensure that your PWA remains functional offline while efficiently managing cache storage.
