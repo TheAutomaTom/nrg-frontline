@@ -23,3 +23,14 @@ This strategy serves cached images immediately without network requests if they�
 It’s perfect for static assets that don’t change often.
 We’ll limit the image cache to 100 entries and set an expiration of 60 days.
 These strategies ensure that your PWA remains functional offline while efficiently managing cache storage.
+
+## Naive UI
+
+`https://www.naiveui.com/en-US/dark/docs`
+
+### Icons
+
+> Refer to `https://github.com/07akioni/xicons#installation`
+
+We'll try out @vicons/fluent to begin:
+`https://developer.microsoft.com/en-us/fluentui#/styles/web/icons`
