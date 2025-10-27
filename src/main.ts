@@ -2,12 +2,20 @@ import "./styles/index.css";
 
 import App from "./App.vue";
 import { createApp } from "vue";
-const app = createApp(App);
+const _app = createApp(App);
 
 import { createPinia } from "pinia";
-app.use(createPinia());
+_app.use(createPinia());
 
-import router from "./router";
-app.use(router);
+// import router from "./router";
+// _app.use(router);
 
-app.mount("#app");
+import { naiveComponents } from "./naive-components";
+// naiveComponents.forEach((element) => {
+//   _app.component(element.name, element.component);
+// });
+naiveComponents.forEach(({ name, component }) => {
+  _app.component(name, component);
+});
+
+_app.mount("#app");

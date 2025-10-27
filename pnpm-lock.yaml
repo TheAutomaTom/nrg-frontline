@@ -33,6 +33,9 @@ importers:
       '@types/node':
         specifier: ^22.18.6
         version: 22.18.12
+      '@vicons/fluent':
+        specifier: ^0.13.0
+        version: 0.13.0
       '@vicons/utils':
         specifier: ^0.1.4
         version: 0.1.4(vue@3.5.22(typescript@5.9.3))
@@ -1434,6 +1437,9 @@ packages:
   '@typescript-eslint/visitor-keys@8.46.2':
     resolution: {integrity: sha512-tUFMXI4gxzzMXt4xpGJEsBsTox0XbNQ1y94EwlD/CuZwFcQP79xfQqMhau9HsRc/J0cAPA/HZt1dZPtGn9V/7w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@vicons/fluent@0.13.0':
+    resolution: {integrity: sha512-bYGZsOE3qzvm3Cm43e7tybgGlr5ZUpYqtRZq0g0Tfupe8jIzLolpvQLNUt1zS8Mgt6goTbUk5YH7Fkv16jkykg==}
 
   '@vicons/utils@0.1.4':
     resolution: {integrity: sha512-OHI19qVNN6i+uPQ+Y3f2s0dUxwsYnOCcKBW7XOU4yXXO1aU3ZoKpblCc3+4N0qmgoJs5rWKRAaMisipqEXJwAg==}
@@ -5069,6 +5075,8 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.46.2
       eslint-visitor-keys: 4.2.1
+
+  '@vicons/fluent@0.13.0': {}
 
   '@vicons/utils@0.1.4(vue@3.5.22(typescript@5.9.3))':
     dependencies:
