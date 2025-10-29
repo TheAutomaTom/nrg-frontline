@@ -1,0 +1,13 @@
+// define all theme values here
+$primary-color: #4f46e5;
+$secondary-color: #64748b;
+$background-dark: #121212;
+$text-light: #f1f5f9;
+
+// expose as CSS variables for runtime use
+:root {
+  --color-primary: #{$primary-color};
+  --color-secondary: #{$secondary-color};
+  --color-bg-dark: #{$background-dark};
+  --color-text-light: #{$text-light};
+}

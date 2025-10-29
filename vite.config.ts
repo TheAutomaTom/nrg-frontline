@@ -6,12 +6,10 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import vueDevTools from "vite-plugin-vue-devtools";
 
 import { VitePWA } from "vite-plugin-pwa";
-import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [
     vue(),
-    tailwindcss(),
     VitePWA({
       devOptions: {
         enabled: true,

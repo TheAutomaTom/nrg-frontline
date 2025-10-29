@@ -1,0 +1,12 @@
+@use "./theme" as *;
+@use "./scrollbar" as *;
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  font-family: system-ui, sans-serif;
+}
