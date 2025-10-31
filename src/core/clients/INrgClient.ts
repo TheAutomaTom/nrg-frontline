@@ -1,4 +1,4 @@
-import type { WorkOrderDto } from "../nrg-dtos/WorkOrderDto";
+import type { WorkOrderDto } from "../models/nrg-dtos/WorkOrderDto";
 // import type { Punch } from "../Dtos/Outbound/Punch";
 
 export interface INrgClient {

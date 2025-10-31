@@ -1,5 +1,11 @@
-import type { LaborItemDto, LaborItemsChunckedApiResponseDto } from "../nrg-dtos/LaborItemDto";
-import type { WorkOrdersChunckedApiResponseDto, WorkOrderDto } from "../nrg-dtos/WorkOrderDto";
+import type {
+  LaborItemDto,
+  LaborItemsChunckedApiResponseDto,
+} from "../models/nrg-dtos/LaborItemDto";
+import type {
+  WorkOrdersChunckedApiResponseDto,
+  WorkOrderDto,
+} from "../models/nrg-dtos/WorkOrderDto";
 import type { INrgClient } from "./INrgClient";
 // import { ResponseState } from "../ResponseState";
 
