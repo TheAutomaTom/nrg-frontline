@@ -1,8 +1,18 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
+import CallApi from "../app/views/CallApi.vue";
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [],
-})
+const routes = [
+  {
+    path: "/",
+    name: "call-api",
+    component: CallApi,
+    // props: true,
+  },
+];
 
-export default router
+export const router = createRouter({
+  //
+  // history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
+  routes,
+});

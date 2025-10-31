@@ -37,7 +37,7 @@ export const useAppState = defineStore("AppState", () => {
         longitude: position.coords.longitude,
       };
     } catch (err) {
-      StatusMessage.value = `Location error: ${err.message || err}`;
+      // StatusMessage.value = `Location error: ${err.message || err}`;
       return {} as Coordinates;
     }
   };

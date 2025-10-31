@@ -7,8 +7,8 @@ const _app = createApp(App);
 import { createPinia } from "pinia";
 _app.use(createPinia());
 
-// import router from "./router";
-// _app.use(router);
+import { router } from "./router/index";
+_app.use(router);
 
 import { naiveComponents } from "./naive-components";
 // naiveComponents.forEach((element) => {

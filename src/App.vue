@@ -1,13 +1,13 @@
 <template>
   <n-config-provider :theme="darkTheme" :theme-overrides="themeOverrides">
 
-    <n-layout-header bordered>
+    <!-- <n-layout-header bordered>
       <h3>Nrg Frontline</h3>
-    </n-layout-header>
+    </n-layout-header> -->
 
     <n-layout class="app-layout">
       <n-layout-content class="app-content">
-        <p>Content</p>
+        <router-view />
       </n-layout-content>
 
       <n-layout-footer bordered class="app-footer">
