@@ -1,13 +1,21 @@
 // define all theme values here
-$primary-color: #4f46e5;
+$primary-color: #b96fe2;
 $secondary-color: #64748b;
 $background-dark: #121212;
 $text-light: #f1f5f9;
+$primary-padding-y: 0.1rem;
+$primary-padding-x: 1rem;
+$gap-typical: 6px;
+$gap-typical-x: 12px;
 
-// expose as CSS variables for runtime use
 :root {
   --color-primary: #{$primary-color};
   --color-secondary: #{$secondary-color};
   --color-bg-dark: #{$background-dark};
   --color-text-light: #{$text-light};
+  --padding-primary-y: #{$primary-padding-y};
+  --padding-primary-x: #{$primary-padding-x};
+  --gap-typical: #{$gap-typical};
+  --gap-typical-x: #{$gap-typical-x};
+  --footer-height: 3.5rem;
 }

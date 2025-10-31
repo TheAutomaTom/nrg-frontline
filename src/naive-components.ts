@@ -1,5 +1,7 @@
 import {
   NConfigProvider,
+  NLayout,
+  NLayoutContent,
   NLayoutHeader,
   NLayoutFooter,
   NButton,
@@ -9,18 +11,20 @@ import {
   darkTheme,
   zhCN,
   dateZhCN,
+  NScrollbar,
 } from "naive-ui";
-import { createTheme, inputDark } from "naive-ui";
-// locale & dateLocale
 
 export const naiveComponents = [
   { component: NConfigProvider, name: "n-config-provider" },
-  { component: NLayoutHeader, name: "n-layoutHeader" },
-  { component: NLayoutFooter, name: "n-layoutFooter" },
+  { component: NLayout, name: "n-layout" },
+  { component: NLayoutContent, name: "n-layout-content" },
+  { component: NLayoutHeader, name: "n-layout-header" },
+  { component: NLayoutFooter, name: "n-layout-footer" },
   { component: NInput, name: "n-input" },
   { component: NSpace, name: "n-space" },
   { component: NCard, name: "n-card" },
   { component: NButton, name: "n-button" },
+  { component: NScrollbar, name: "n-n-scrollbar" },
 ];
 
 export const naiveConfig = { theme: darkTheme, locale: zhCN, dateLocale: dateZhCN };
